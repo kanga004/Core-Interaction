@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>color</title>
+
+<style>
+
+html, body{
+	margin: 0vmin;
+
+}
+
+</style>
+
+</head>
+<body>
+
+	<script>
+		var digits = 0
+		var rand = Math.floor(Math.random()* 10)+3;
+		while (digits < rand){
+			digits = digits+1;
+			var cry = document.createElement("div");
+			document.body.appendChild(cry);
+
+			cry.style.margin = 0+"vw";
+			cry.style.height = 100/rand+"vh";
+
+
+			var x = Math.floor(Math.random()* 360);
+			var y = Math.floor(Math.random()* 100);
+			var z = Math.floor(Math.random()* 100);
+			cry.style.background = "hsl("+x+", "+y+"%, "+z+"%)"
+		}
+
+	</script>
+</body>
+</html>
