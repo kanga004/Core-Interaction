@@ -43,6 +43,13 @@ h2, h3{
 	color: black ;
 	font-weight: bold;
 	font-family: sans-serif;
+	position: absolute;
+	font-size: 30px;
+	color: black ;
+	font-weight: bold;
+	font-family: sans-serif;
+	-webkit-text-stroke-width: 1px;
+  	-webkit-text-stroke-color: black;
 
 
 	opacity: 1;
@@ -95,7 +102,7 @@ p{
 
 </head>
 <body>
-<h2>CLICK ON A WORD TO FIND OUT THE STORY-ISH</h2>
+<h2 id="huh">CLICK ON A WORD TO FIND OUT THE STORY-ISH</h2>
 <h2></h2>
 <h1 id="ex">X</h1>
 
@@ -153,7 +160,7 @@ function sortData(json) {
 				var z = -20;			
 
 
-				//document.getElementById("sentence-" + index).style.opacity = 100;
+				
 				//document.getElementById("word-" + index).style = "color: black";
 				
 
@@ -161,6 +168,7 @@ function sortData(json) {
 				document.getElementById("ex").style.opacity = 100;
 				document.getElementById("word-" + index).style = "z-index:" + z ;
 				document.getElementById("word-" + index).style.color = "black";
+				document.getElementById("huh").style.opacity = 0;
 
 				//z = z - 20;
 
