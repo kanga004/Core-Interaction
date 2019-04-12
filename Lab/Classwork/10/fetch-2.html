@@ -4,17 +4,18 @@
 	<title></title>
 </head>
 <body>
-<script>
 
-//load out json file.
-var url = "https://raw.githubusercontent.com/kaway169/Core-Interaction/master/classwork/09/water.json";
+<script>
+	
+//load your json file 
+var url = "https://raw.githubusercontent.com/kanga004/Core-Interaction/master/Lab/Classwork/09/water.json";
 
 fetch(url)
 	.then(function(response){return response.json();})
-	.then(function(json){ buildPage(json); })
+	.then(function(json){buildPage(json); })
 
-function buildPage(data) {
-	for(var i = 0; i < data.length; i = i + 1){
+function buildPage (data) {
+	for (var i = 0; i < data.length; i = i + 1){
 		var kind = document.createElement("h1");
 		var oz = document.createElement("h2");
 		var time = document.createElement("h3");
@@ -25,10 +26,10 @@ function buildPage(data) {
 		oz.innerHTML = data[i].oz;
 		time.innerHTML = data[i].time;
 
-		//this is for image
-		//var image = document.createelement("img");
-		// image.setAttribute ("src", data[i].url);
-		// document.body.appendChild(image);
+		//var image = document.createElement ("img");
+		//image.setAttribute("src", data[i].url);
+		//document.body.appendChild(image);
+
 
 		if(data[i].kind == "coffee"){
 			kind.style.color = "brown";
@@ -39,9 +40,12 @@ function buildPage(data) {
 
 		var line = document.createElement("hr");
 		document.body.appendChild(line);
+
+
 	}
 
 }
 </script>
+
 </body>
 </html>
